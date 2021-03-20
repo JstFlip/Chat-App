@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chat application made by Flip" />
+    <meta name="keywords" content="Chat, Chat app, Chat with friends" />
+    <meta name="author" content="JstFlip" />
+    <script src="/js/socket.io.js" defer></script>
+    <script src="/js/chat.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <title>Flip's chat app</title>
+  </head>
+  <body>
+    <header>
+      <div class="data">
+        <i class="faw fas fa-user-circle"></i>
+        <span class="spanUser bold"><%= username %></span>
+      </div>
+      <div class="data">
+        <i class="faw fas fa-globe"></i>
+        <span class="spanRoom bold"><%= room %></span>
+      </div>
+      <button class="dcBtn">Disconnect</button>
+    </header>
+
+    <div class="messages"></div>
+
+    <form class="form" autocomplete="off">
+      <label for="messageInp" class="sr-only">Message</label>
+      <input
+        id="messageInp"
+        class="textInput"
+        type="text"
+        placeholder="Message..."
+      />
+      <button class="send" type="submit">
+        <i class="faw fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </body>
+</html>
